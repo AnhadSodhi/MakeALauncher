@@ -11,7 +11,7 @@ A simple program that lets the user create a file that launches multiple program
 ## Tips
 * Abort the setup at any time using Ctrl+C. If this is during the 'searching for programs' phase, this will cause the output file to be incomplete. Delete it and try again, or run setup.bat again using the same name to overwrite the old launcher file.
 * If you changed the locations of your programs after running setup, have no fear! Simply run setup.bat again and it will give you a new, updated output file.
-* It may take some time to find each program, especially if you have a lot of files.
+* It may take some time to find each program, especially if you have a lot of files or are using a hard drive.
 
 ## Feel free to open an issue ticket (in the top menu) if you have any problems or questions!
 
