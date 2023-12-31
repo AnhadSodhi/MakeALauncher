@@ -9,7 +9,7 @@ A simple program that lets the user create a file that launches multiple program
 * That's it! You now have your very own custom launcher.
 
 ## Tips
-* Abort the setup at any time using Ctrl+C. This will cause the output file to be incomplete. Delete it.
+* Abort the setup at any time using Ctrl+C. If this is during the 'searching for programs' phase, this will cause the output file to be incomplete. Delete it and try again, or run setup.bat again using the same name to overwrite the old launcher file.
 * If you changed the locations of your programs after running setup, have no fear! Simply run setup.bat again and it will give you a new, updated output file.
 * It may take some time to find each program, especially if you have a lot of files.
 
