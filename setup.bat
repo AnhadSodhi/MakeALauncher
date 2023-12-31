@@ -4,7 +4,7 @@ setlocal enabledelayedexpansion
 echo Welcome to MakeALauncher. Follow the instructions to create your own custom launcher.
 set /p "search_programs=Which programs to put in the launcher? (Separate each one with a space. Capitalization does not matter. Make sure they each end with .exe) "
 set /p "drive_letters=Which drives to search? (Type only the drive letters, each separated with a space. Leave blank to search all of them) "
-set /p "output_batch_file=What to name the output file? (If a file already exists with that name, it will be replaced. Make sure it ends with .bat) "
+set /p "output_batch_file=What to name the output file? (If a file already exists with that name, it will be replaced. No spaces allowed. Make sure it ends with .bat) "
 
 rem replace drive_letters with all drives if input is empty or only spaces
 if "%drive_letters%"=="" (
