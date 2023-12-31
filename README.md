@@ -15,4 +15,4 @@ A simple program that lets the user create a file that launches multiple program
 
 ## Feel free to open an issue ticket (in the top menu) if you have any problems or questions!
 
-<sub>Most of this code was taken from my other project, BakkesLeague Launcher (https://github.com/frost-ee/BakkesLeague-Launcher). I wanted to make a version that wasn't hard-coded and instead let the user decide which programs to add to the output file.</sub>
+<sub>Most of this code was taken from my other project, BakkesLeague Launcher (https://github.com/frost-ee/BakkesLeague-Launcher). I wanted to make a version that wasn't hard-coded and instead let the user decide which programs to add to the output file. Again, I had assistance from ChatGPT 3.5 (December 30/31, 2023)</sub>
