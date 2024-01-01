@@ -34,6 +34,8 @@ for %%p in (%search_programs%) do (
 		)
 	)
 )
+
+rem Completion message
 echo %output_batch_file% created. You may need to refresh the folder to make it appear.
 
 endlocal
