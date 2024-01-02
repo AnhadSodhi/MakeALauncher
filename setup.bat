@@ -3,8 +3,14 @@ setlocal enabledelayedexpansion
 
 echo Welcome to MakeALauncher. Follow the instructions to create your own custom launcher. Use enter to submit each input.
 
-set /p "search_programs=Which programs to put in the launcher? (Separate each one with a space. Capitalization does not matter. Make sure they each end with .exe) "
+set /p "search_programs=Which programs to put in the launcher? (Separate each one with a space. Capitalization does not matter. DO NOT WRITE .exe, the program will fill that in automatically.) "
 call :trimSpaces search_programs
+rem Add .exe to the end of each program
+set "temp_programs="
+for %%i in (%search_programs%) do (
+  set "temp_programs=!temp_programs!%%i.exe "
+)
+set "search_programs=%temp_programs%"
 
 set /p "drive_letters=Which drives to search? (Type only the drive letters, each separated with a space. Leave blank to search all of them) "
 call :trimSpaces drive_letters
