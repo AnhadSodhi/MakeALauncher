@@ -3,6 +3,8 @@ setlocal enabledelayedexpansion
 
 echo Welcome to MakeALauncher. Follow the instructions to create your own custom launcher. Use enter to submit each input.
 
+:Start
+
 set /p "search_programs=Which programs to put in the launcher? (Separate each one with a space. Capitalization does not matter. DO NOT WRITE .exe, the program will fill that in automatically.) "
 call :trimSpaces search_programs
 rem Add .exe to the end of each program
@@ -22,10 +24,25 @@ call :trimSpaces output_batch_file
 rem replace drive_letters with all drives if input is empty or only spaces
 if "%drive_letters%"=="" (
     set "drive_letters=A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
-) else if not "%drive_letters: =%"=="" (
-    set "drive_letters=A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
 )
 
+rem Confirmation handling
+echo You entered this information. Is it correct?
+echo Programs to add: %search_programs%
+echo Drives to search: %drive_letters%
+echo Output file: %output_batch_file%
+
+choice /C YN /M "Press Y for Yes or N to change the inputs."
+
+if errorlevel 2 goto No
+echo You chose Y
+goto Continue
+
+:No
+echo You chose N
+goto Start
+
+:Continue
 rem Delete the output batch file if it already exists
 if exist "%output_batch_file%" (
     del "%output_batch_file%"
