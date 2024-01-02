@@ -1,10 +1,50 @@
 @echo off
 setlocal enabledelayedexpansion
 
-echo Welcome to MakeALauncher. Follow the instructions to create your own custom launcher. Do not use spaces before or after your inputs. Use enter to submit each input.
+echo Welcome to MakeALauncher. Follow the instructions to create your own custom launcher. Use enter to submit each input.
+
 set /p "search_programs=Which programs to put in the launcher? (Separate each one with a space. Capitalization does not matter. Make sure they each end with .exe) "
 set /p "drive_letters=Which drives to search? (Type only the drive letters, each separated with a space. Leave blank to search all of them) "
 set /p "output_batch_file=What to name the output file? (If a file already exists with that name, it will be replaced. No spaces allowed. Make sure it ends with .bat) "
+
+rem Remove leading spaces for search_programs
+:trimStart
+if "!search_programs:~0,1!" == " " (
+    set "search_programs=!search_programs:~1!"
+    goto :trimStart
+)
+rem Remove trailing spaces for search_programs
+:trimEnd
+if "!search_programs:~-1!" == " " (
+    set "search_programs=!search_programs:~0,-1!"
+    goto :trimEnd
+)
+
+rem Remove leading spaces for drive_letters
+:trimStart2
+if "!drive_letters:~0,1!" == " " (
+	set "drive_letters=!drive_letters:~1!"
+	goto :trimStart2
+)
+rem Remove trailing spaces for drive_letters
+:trimEnd2
+if "!drive_letters:~-1!" == " " (
+	set "drive_letters=!drive_letters:~0,-1!"
+	goto :trimEnd2
+)
+
+rem Remove leading spaces for output_batch_file
+:trimStart3
+if "!output_batch_file:~0,1!" == " " (
+	set "output_batch_file=!output_batch_file:~1!"
+	goto :trimStart3
+)
+rem Remove trailing spaces for output_batch_file
+:trimEnd3
+if "!output_batch_file:~-1!" == " " (
+	set "output_batch_file=!output_batch_file:~0,-1!"
+	goto :trimEnd3
+)
 
 rem replace drive_letters with all drives if input is empty or only spaces
 if "%drive_letters%"=="" (
