@@ -35,11 +35,9 @@ echo Output file: %output_batch_file%
 choice /C YN /M "Press Y for Yes or N to change the inputs."
 
 if errorlevel 2 goto No
-echo You chose Y
 goto Continue
 
 :No
-echo You chose N
 goto Start
 
 :Continue
@@ -68,8 +66,23 @@ for %%p in (%search_programs%) do (
 rem Completion message
 echo %output_batch_file% created. You may need to refresh the folder to make it appear.
 
+rem Ask if user wants to launch the output file
+echo Would you like to launch the output file now?
+choice /C YN /M "Press Y for Yes or N for No."
+if errorlevel 2 goto BeforeMakeAnother
+call "%output_batch_file%"
+goto EndOfProgram
+
+:BeforeMakeAnother
+rem Ask if user wants to make another launcher
+echo Would you like to make another launcher?
+choice /C YN /M "Press Y for Yes or N for No."
+if errorlevel 2 goto EndOfProgram
+goto Start
+
+:EndOfProgram
+
 endlocal
-pause
 
 :trimSpaces
 rem Remove leading spaces
