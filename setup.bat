@@ -5,6 +5,7 @@ echo Welcome to MakeALauncher. Follow the instructions to create your own custom
 
 :Start
 
+rem Process user input for programs
 echo Which programs to put in the launcher? (Separate each one with a space. Capitalization does not matter. DO NOT WRITE .exe, the program will fill that in automatically.)
 set /p "search_programs="
 call :trimSpaces search_programs
@@ -15,10 +16,12 @@ for %%i in (%search_programs%) do (
 )
 set "search_programs=%temp_programs%"
 
+rem Process user input for which drives to search
 echo Which drives to search? (Type only the drive letters, each separated with a space. Leave blank to search all of them)
 set /p "drive_letters="
 call :trimSpaces drive_letters
 
+rem Process user input for what to name the output file
 echo What to name the output file? (If a file already exists with that name, it will be replaced. No spaces allowed.)
 set /p "output_batch_file="
 set "output_batch_file=%output_batch_file%.bat"
