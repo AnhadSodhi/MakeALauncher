@@ -5,7 +5,7 @@ Have you ever wanted to launch multiple programs with just one click? Now you ca
 * Download and launch setup.bat.
 * It will prompt you for the names of the programs you wish to add to the launcher, the drives to search, and the name of the output file. Enter them in as they appear.
 * The program will scan your computer for the locations of those programs and add them to the output file.
-* The computer will display a message once it is finished. Click anywhere to close that window.
+* The computer will display a message once it is finished. Press any button to close that window.
 * That's it! You now have your very own custom launcher.
 
 ## Tips
