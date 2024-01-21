@@ -16,4 +16,4 @@ Have you ever wanted to launch multiple programs with just one click? Now you ca
 
 ## Feel free to open an issue ticket (in the top menu) if you have any problems or questions!
 
-<sub>Some of this code was taken from my other project, BakkesLeague Launcher (https://github.com/frost-ee/BakkesLeague-Launcher). I wanted to make a version that wasn't hard-coded and instead let the user decide which programs to add to the output file. Again, I had some assistance from ChatGPT 3.5.</sub>
+<sub>Some of this code was taken from my other project, BakkesLeague Launcher (https://github.com/frost-ee/BakkesLeague-Launcher). I wanted to make a version that wasn't hard-coded and instead let the user decide which programs to add to the output file. I had some input from ChatGPT 3.5 for the searching function, along with translating it to MacOS and Ubuntu.</sub>
