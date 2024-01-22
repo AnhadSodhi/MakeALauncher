@@ -17,9 +17,9 @@ call :trimSpaces drive_letters
 
 rem Process user input for what to name the output file
 echo What to name the output file? (If a file already exists with that name, it will be replaced. No spaces allowed.)
-set /p "output_batch_file="
-set "output_batch_file=%output_batch_file%.bat"
-call :trimSpaces output_batch_file
+set /p "output_file="
+set "output_file=%output_file%.bat"
+call :trimSpaces output_file
 
 rem replace drive_letters with all drives if input is empty or only spaces
 if "%drive_letters%"=="" (
@@ -30,7 +30,7 @@ rem Confirmation handling
 echo You entered this information. Is it correct?
 echo Programs to add: %search_programs%
 echo Drives to search: %drive_letters%
-echo Output file: %output_batch_file%
+echo Output file: %output_file%
 
 choice /C YN /M "Press Y for Yes or N to change the inputs."
 
@@ -42,9 +42,9 @@ goto Start
 
 :Continue
 rem Delete the output batch file if it already exists
-if exist "%output_batch_file%" (
-    del "%output_batch_file%"
-    echo old %output_batch_file% deleted.
+if exist "%output_file%" (
+    del "%output_file%"
+    echo old %output_file% deleted.
 )
 
 rem Iterate through all programs
@@ -58,19 +58,19 @@ for %%p in (%search_programs%) do (
         rem Use dir /s /b to recursively search for the program path
         for /f "tokens=*" %%f in ('dir /s /b "!search_directory!%%p" 2^>nul') do (
             echo Found: %%f
-            echo start "" "%%f" >> "%output_batch_file%"
+            echo start "" "%%f" >> "%output_file%"
         )
     )
 )
 
 rem Completion message
-echo %output_batch_file% created. You may need to refresh the folder to make it appear.
+echo %output_file% created. You may need to refresh the folder to make it appear.
 
 rem Ask if user wants to launch the output file
 echo Would you like to launch the output file now?
 choice /C YN /M "Press Y for Yes or N for No."
 if errorlevel 2 goto BeforeMakeAnother
-call "%output_batch_file%"
+call "%output_file%"
 goto EndOfProgram
 
 :BeforeMakeAnother
