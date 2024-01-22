@@ -4,7 +4,7 @@ echo "Welcome to MakeALauncher. Follow the instructions to create your own custo
 
 while true; do
     # Process user input for programs
-    read -p "Which programs to put in the launcher? (Separate each one with a space. Capitalization does not matter. Remember to write the file extension.): " search_programs
+    read -p "Which programs to put in the launcher? (Separate each one with a space. Capitalization does not matter. Remember to write the file extensions.): " search_programs
     search_programs=$(echo "$search_programs" | tr -d ' ')
 
     # Process user input for which drives to search
