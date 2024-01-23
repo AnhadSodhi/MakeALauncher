@@ -12,6 +12,7 @@ Have you ever wanted to launch multiple programs with just one click? Now you ca
 * Abort the setup at any time. If this is during the 'searching for programs' phase, this will cause the output file to be incomplete. Delete it and try again, or run the setup file again using the same name to overwrite the old launcher file.
 * If you changed the locations of your programs after running setup, have no fear! Simply run setup again and it will give you a new, updated output file.
 * It may take some time to find each program, especially if you have a lot of files or are using a hard drive.
+* The program may not work if you are using the MacOS or Linux versions, as I have not done any testing yet.
 * The program may not work if you are using a virtualized machine.
 
 ## Feel free to open an issue ticket (in the top menu) if you have any problems or questions!
