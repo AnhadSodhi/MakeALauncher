@@ -8,6 +8,10 @@ Have you ever wanted to launch multiple programs with just one click? Now you ca
 * The computer will display a message once it is finished. Press any button to close that window.
 * That's it! You now have your very own custom launcher.
 
+## Images (Windows version)
+![image](https://github.com/AnhadSodhi/MakeALauncher/assets/96636073/9843bcec-a933-44aa-b079-1de00be5ea09)
+![image](https://github.com/AnhadSodhi/MakeALauncher/assets/96636073/86e49799-73be-468f-8b20-f281aaed2957)
+
 ## Tips
 * Abort the setup at any time. If this is during the 'searching for programs' phase, this will cause the output file to be incomplete. Delete it and try again, or run the setup file again using the same name to overwrite the old launcher file.
 * If you changed the locations of your programs after running setup, have no fear! Simply run setup again and it will give you a new, updated output file.
