@@ -5,7 +5,7 @@ echo "Welcome to MakeALauncher. Follow the instructions to create your own custo
 while true; do
     # Process user input for programs
     read -p "Which programs to put in the launcher? (Separate each one with a space. Capitalization does not matter. Remember to write the file extensions.): " search_programs
-    search_programs=$(echo "$search_programs" | tr -d ' ')
+	search_programs=$search_programs
 
     # Process user input for what to name the output file
     read -p "What to name the output file? (If a file already exists with that name, it will be replaced. No spaces allowed.): " output_file
